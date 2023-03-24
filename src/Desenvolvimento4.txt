@@ -2,6 +2,7 @@ Desenvolvimento 4
 Aluno: Alex Barros
 Data: 24/03/2023.
 
+Componente react:
 import React from "react";
 
 function Header(props) {
@@ -16,6 +17,7 @@ function Header(props) {
 
 export default Header;
 
+App.js:
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
