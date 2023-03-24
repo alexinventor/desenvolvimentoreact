@@ -1,0 +1,31 @@
+Desenvolvimento 4
+Aluno: Alex Barros
+Data: 24/03/2023.
+
+import React from "react";
+
+function Header(props) {
+
+    return (
+        <header>
+            <h1>{props.title}</h1>
+        </header>
+    );
+
+}
+
+export default Header;
+
+import logo from './logo.svg';
+import './App.css';
+import Header from './Header';
+
+function App() {
+  return (
+    <div className="App">
+      <Header title='Estou usando Props!' />
+    </div>
+  );
+}
+
+export default App;
