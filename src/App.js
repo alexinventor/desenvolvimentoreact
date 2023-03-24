@@ -5,7 +5,7 @@ import Header from './Header';
 function App() {
   return (
     <div className="App">
-      <Header title="Meu Primeiro Componente" />
+      <Header title='Estou usando Props!' />
     </div>
   );
 }
