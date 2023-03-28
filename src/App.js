@@ -1,22 +1,9 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
+import React from "react"
+import './index.css'
+import Rotas from "./routes"
 
-function App() {
-
-  const [contador, setContador] = useState(0);
-
-  function handleButtonClick() {
-    setContador(contador + 1);
-  }
-
+export default function App() {
   return (
-    <div className="App">
-      <Header title={contador} />
-      <input type="button" value="Clique aqui" onClick={handleButtonClick} />
-    </div>
+      <Rotas/>
   );
 }
-
-export default App;
