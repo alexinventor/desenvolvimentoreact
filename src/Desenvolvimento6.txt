@@ -1,0 +1,89 @@
+Desenvolvimento 6
+Aluno: Alex Barros
+Data: 28/03/2023.
+
+App.js:
+import React from "react"
+import './index.css'
+import Rotas from "./routes"
+
+export default function App() {
+  return (
+      <Rotas/>
+  );
+}
+
+routes.js:
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import Home from './Home'
+import Sobre from './Sobre'
+import Usuario from './Usuario'
+
+function Rotas() {
+    return (
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Sobre' element={<Sobre />} />
+          <Route path='/Usuario' element={<Usuario />} />
+        </Routes>
+      </Router>
+    )
+  }
+
+  export default Rotas;
+
+Home.js:
+import React from 'react'
+import { Link  } from 'react-router-dom'
+
+function Home(){
+    return (
+        <div>
+            <h1>Página Inicial</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/Sobre">Sobre</Link>
+                    </li>
+                    <li>
+                        <Link to="/Usuario">Usuario</Link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    )
+}
+
+export default Home;
+
+Sobre.js:
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Sobre(){
+    return (
+        <div>
+            <h1>Sobre</h1>
+            <Link to="/">retornar a página inicial</Link>
+        </div>
+    )
+}
+
+export default Sobre;
+
+Usuario.js:
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Usuario(){
+    return (
+        <div>
+            <h1>Usuário</h1>
+            <Link to="/">retornar a página inicial</Link>
+        </div>
+    )
+}
+
+export default Usuario;
